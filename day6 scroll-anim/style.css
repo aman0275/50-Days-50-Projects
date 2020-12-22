@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffd2d2;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  /* view port height - complete display height */
+
+  /* to prevent scroll bar from showing */
+}
+
+h2 {
+  margin: 10px;
+}
+
+.box {
+  background-color: rgb(92, 45, 6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 150px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
+  margin: 20px;
+}
+
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+.box.show {
+  transform: translateX(0);
+}
